@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: radial-gradient(circle, #2a2a2a, #1b1b1b, #161616);
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #c7c7c7;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #9bbbd4;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Loader Container */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Guitar String Animation */
+.guitar-loader {
+    width: 120px;
+    height: 10px;
+    background: linear-gradient(45deg, #88c0d0, #5e81ac);
+    border-radius: 5px;
+    animation: strum 2.5s infinite ease-in-out;
+    margin-right: 20px;
+}
+
+/* Code Block Loader */
+.code-loader {
+    width: 80px;
+    height: 80px;
+    border: 5px solid transparent;
+    border-top: 5px solid #88c0d0;
+    border-right: 5px solid #5e81ac;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+/* Text Message */
+.message {
+    font-size: 1.1rem;
+    color: #c7c7c7;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes strum {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.2); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .guitar-loader {
+        width: 100px;
+        height: 8px;
+    }
+
+    .code-loader {
+        width: 60px;
+        height: 60px;
+        border: 4px solid transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .guitar-loader {
+        width: 80px;
+        height: 6px;
+    }
+
+    .code-loader {
+        width: 50px;
+        height: 50px;
+        border: 3px solid transparent;
+    }
+}
